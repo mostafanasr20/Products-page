@@ -17,42 +17,20 @@ window.addEventListener("load", function() {
 
 });
 
-    // const slides = document.querySelectorAll(".slide");
-    // let index = 0;
 
-    // function showSlide() {
-    //   slides.forEach(slide => slide.classList.remove("active"));
-    //   slides[index].classList.add("active");
-    //   index = (index + 1) % slides.length;
-    // }
+const slides = document.querySelectorAll(".landing .box");
+let index = 0;
 
-    // setInterval(showSlide, 4000)
-
-
-    // const slides = document.querySelectorAll(".slide")
-
-    // let index = 0
-
-    // function  showSlide(){
-    //   slides.forEach(slide => slide.classList.remove("active"))
-    //   slides[index].classList.add("active")
-    //   index = (index + 1) % slides.length
-
-    //   setInterval(showSlide, 4000)
-    // }
-
-    // console.log(showSlide())
-
-
-const slides = document.querySelectorAll(".slide")
-let index = 0
-
-
-function showSlide(){
-  slides.forEach(slide => slide.classList.remove("active"))
-  slides[index].classList.add("active")
-  index = (index + 1) % slides.length
-  setInterval(showSlide , 4000)
+function showSlide() {
+  slides.forEach(slide => slide.classList.remove("active")); 
+  slides[index].classList.add("active");
+  index = (index + 1) % slides.length; 
 }
 
-console.log(showSlide())
+// أول بوكس ظاهر
+showSlide();
+
+// يغير كل 3 ثواني
+setInterval(showSlide, 3000);
+
+
