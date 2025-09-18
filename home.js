@@ -17,26 +17,42 @@ window.addEventListener("load", function() {
 
 });
 
+    // const slides = document.querySelectorAll(".slide");
+    // let index = 0;
 
- const slides = document.querySelector(".slides");
-    const images = document.querySelectorAll(".slides img");
-    const prev = document.querySelector(".btn.left");
-    const next = document.querySelector(".btn.right");
+    // function showSlide() {
+    //   slides.forEach(slide => slide.classList.remove("active"));
+    //   slides[index].classList.add("active");
+    //   index = (index + 1) % slides.length;
+    // }
 
-     let index = 0;
-
-    function showSlide(i) {
-      index = (i + images.length) % images.length;
-      slides.style.transform = `translateX(${-index * 100}%)`;
-    }
-
-    prev.addEventListener("click", () => showSlide(index - 1));
-    next.addEventListener("click", () => showSlide(index + 1));
-
-    // تشغيل تلقائي
-    setInterval(() => showSlide(index + 1), 3000)
+    // setInterval(showSlide, 4000)
 
 
+    // const slides = document.querySelectorAll(".slide")
+
+    // let index = 0
+
+    // function  showSlide(){
+    //   slides.forEach(slide => slide.classList.remove("active"))
+    //   slides[index].classList.add("active")
+    //   index = (index + 1) % slides.length
+
+    //   setInterval(showSlide, 4000)
+    // }
+
+    // console.log(showSlide())
 
 
+const slides = document.querySelectorAll(".slide")
+let index = 0
 
+
+function showSlide(){
+  slides.forEach(slide => slide.classList.remove("active"))
+  slides[index].classList.add("active")
+  index = (index + 1) % slides.length
+  setInterval(showSlide , 4000)
+}
+
+console.log(showSlide())
