@@ -34,3 +34,15 @@ showSlide();
 setInterval(showSlide, 3000);
 
 
+let links = document.querySelector(".links"); 
+    let menu = document.querySelector(".menu");
+
+    menu.onclick = function(){
+     if (links.style.right === "-1000px" || !links.style.right){
+        links.style.right = "20px"
+    }else{
+        links.style.right = "-1000px"
+    }
+    }
+    console.log(menu)
+
