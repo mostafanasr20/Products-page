@@ -264,6 +264,7 @@ ul{
               }
         @media( max-width: 430px){
          .landing{
+          display: none;
           background-image: none;
           .box{
             display: flex;
@@ -399,13 +400,7 @@ ul{
         @media(max-width: 430px){
           .offer{
             display: none;
-            width:fit-content;
-            .container{
-              display: flex;
-            align-items: center;
-            flex-direction: column;
-            justify-content: center;
-            }
+          
           }
         }
 
@@ -570,6 +565,13 @@ ul{
         @media(max-width: 430px){
           .item-section{
             .container{
+              .hed-text{
+                   
+          h2{
+            font-size: 20px;
+          }
+        
+              }
               width: 430px;
             .links{
             width: 100%;
@@ -688,10 +690,11 @@ ul{
 
            @media(max-width: 430px){
             .testimonials-section{
-              .head-text{
-                font-size: 10px;
-                font-weight: normal;
-              }
+               .head-text{
+          h1{
+            font-size: 20px;
+          }
+        }
             }
            }
 
