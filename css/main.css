@@ -269,7 +269,7 @@ ul{
             display: flex;
             align-items: center;
             img{
-              flex: 1;
+             
               width: 200px;
             }
             .text{
@@ -579,6 +579,20 @@ ul{
                 line-height: 1.5;
               }
             }
+            .cards-container{
+              width: 100%;
+              .card{
+              width: 100%;
+                .text{
+                 .price{
+                  p{
+                    font-size: 15px ;
+                    font-weight: normal;
+                  }
+                 }
+                }
+              }
+            }
             }
           }
         }
@@ -669,6 +683,15 @@ ul{
             .boxes-cont:hover .box img{
               transform: scale(1.1);
               transition: var(--transition);
+            }
+           }
+
+           @media(max-width: 430px){
+            .testimonials-section{
+              .head-text{
+                font-size: 10px;
+                font-weight: normal;
+              }
             }
            }
 
@@ -772,7 +795,17 @@ ul{
   opacity: 0.9;
 }
 
-  
+  @media(max-width: 430px){
+    .pricing-plans {
+      .container{
+        .head-text{
+          h1{
+            font-size: 20px;
+          }
+        }
+      }
+    }
+  }
 
 
 
