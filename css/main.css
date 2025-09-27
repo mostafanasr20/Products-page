@@ -40,6 +40,17 @@ ul{
     --transition: .5s;
     --font-family: 'Dancing Script';
     --background-color: #1E1E1E;
+
+
+     --background-dark: #000000; 
+  --card-bg: #1a1a1a;          
+  --text-primary: #ffffff; 
+  --text-secondary: #dddddd;  
+  --price-basic: #ffffff;       
+  --price-pro: #ffffff;         
+  --price-premium: #7b61ff;     
+  --btn-yellow: #facc15;        
+  --btn-purple: #4f46e5; 
 }
 
 .container {
@@ -284,12 +295,12 @@ ul{
         h1{
           text-align: center;
           margin: 10px auto;
-         color: #F5F5F5;
+         color: #facc15;
             letter-spacing: 2px;
               text-align: center;
               font-size: 30px;
               font-family: var(--font-family);
-                text-shadow: 1px 0px 3px #F5F5F5;
+                text-shadow: 1px 0px 3px #facc15;
         }
           .container{
             display: flex;
@@ -406,9 +417,9 @@ ul{
               margin: 30px auto 20px;
               text-align: center;
               font-size: 30px;
-              color: #f5f5f5;
+              color: #facc15;
               font-family: var(--font-family);
-                text-shadow: 1px 4px 3px #f5f5f5;
+                text-shadow: 1px 4px 3px #facc15;
             }
             .links{
               display: flex;
@@ -446,23 +457,23 @@ ul{
             margin-top: 50px;
             width: 100%;
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+          grid-template-columns: repeat(auto-fill, minmax(350px , 1fr));
             gap: 20px;
             padding: 0 0 90px;
            .card{
+           
          opacity: 0;
   transition: opacity 2s ease-in-out;
             overflow: hidden;
             display: flex;
             flex-direction: column;
             box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
-
             align-items: center;
             justify-content: center;
           text-align: center;
-              height: 443px;
+              height: 440px;
               background-color: #1E1E1E;
-              border-radius: 7%;
+              border-radius: 40px;
               .img{
                 background-color: #2A2A2A;
                 width: 100%;
@@ -487,7 +498,7 @@ ul{
                 padding: 25px;
                 h5{
                     margin: 0 0 8px;
-                    font-size: 17px;
+                    font-size: 15px;
                     color: #fff;
                     font-weight: 600;
                     line-height: 1.5;
@@ -515,7 +526,7 @@ ul{
                   background: #FFC107;
                   padding: 10px 20px;
                   width: max-content;
-                  margin: auto;
+                  margin: 15px auto 0 ;
                   cursor: pointer;
                   border-radius: 10px;
                   a{
@@ -547,15 +558,26 @@ ul{
         @media(max-width: 728px){
           .item-section{
             .container{
-             
-              width: 720px;
             .links{
-          
-              
                div{
                 font-size: 15px;
                 font-weight: normal;
                }
+            }
+            }
+          }
+        }
+        @media(max-width: 430px){
+          .item-section{
+            .container{
+              width: 430px;
+            .links{
+            width: 100%;
+               div{
+                font-size: 10px;
+                font-weight: normal;
+                line-height: 1.5;
+              }
             }
             }
           }
@@ -571,10 +593,10 @@ ul{
           margin: 10px auto;
             letter-spacing: 2px;
               text-align: center;
-              color: #f5f5f5;
+              color: #facc15;
               font-size: 40px;
               font-family: var(--font-family);
-                text-shadow: 1px 0px 3px #f5f5f5;
+                text-shadow: 1px 0px 3px #facc15;
               }
             }
             .boxes{
@@ -585,8 +607,8 @@ ul{
             }
             .boxes-cont{
                  opacity: 0;
-  transition: opacity 2s ease-in-out;
-
+  transition: opacity 3s ease-in-out;
+              
             .box{
                 box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
               background: var(--background-color);
@@ -596,8 +618,7 @@ ul{
               gap: 20px;
              text-align: center;
               padding: 20px ;
-              border-radius: 6px;
-
+              border-radius: 10px;
               .img{
                 overflow: hidden;
                 width: 150px;
@@ -634,6 +655,14 @@ ul{
               }
             }
             }
+            .boxes-cont:nth-child(2){
+  transition: opacity 4s ease-in-out;
+            }
+       
+            .boxes-cont:nth-child(3){
+  transition: opacity 5s ease-in-out;
+            }
+       
             .boxes-cont.active{
               display: block;
             }
@@ -642,6 +671,107 @@ ul{
               transition: var(--transition);
             }
            }
+
+  
+.pricing-plans {
+  background: #000; 
+  color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.pricing-plans .head-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #facc15; 
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-family: var(--font-family);
+  text-shadow: 1px 0px 3px #facc15;
+}
+
+/* Cards Container */
+.pricing-plans .cards {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Each Card */
+.pricing-plans .card {
+  background: #1a1a1a; 
+  border-radius: 15px;
+  padding: 30px 20px;
+  width: 280px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pricing-plans .card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.1);
+}
+
+/* Card Headings */
+.pricing-plans .card h1 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.pricing-plans .card span {
+  display: block;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #fff; 
+}
+
+/* Premium Price */
+.pricing-plans .card span.critve {
+  color: #7b61ff; 
+}
+
+/* Features */
+.pricing-plans .card p {
+  font-size: 1rem;
+  color: #ddd;
+  margin: 8px 0;
+}
+
+.pricing-plans .card p i {
+  color: #22c55e; /* أيقونة check باللون الأخضر */
+  margin-right: 8px;
+}
+
+
+.pricing-plans .btn a {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.pricing-plans .btn a {
+  background: #facc15; 
+  color: #000;
+}
+
+
+.pricing-plans .btn.critve a {
+  background: #4f46e5;
+  color: #fff;
+}
+
+.pricing-plans .btn a:hover {
+  opacity: 0.9;
+}
+
   
 
 
